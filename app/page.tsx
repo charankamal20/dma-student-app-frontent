@@ -1,113 +1,140 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="pb-44">
+      <section className="h-screen grid lg:grid-cols-2 justify-center items-center">
+        <div className="items-center place-content-start space-y-6">
+          <h1 className="font-bold text-5xl md:text-7xl">
+            Your Personalized Learning Companion
+          </h1>
+          <p className="leading-8 text-lg max-w-2xl">
+            Are you looking to excel in your studies and reach your full
+            academic potential? Look no further! EduTrack is here to support you
+            every step of the way on your learning journey.
+          </p>
+          <div className="space-x-2 flex">
+              <Link className="z-10" href='/test'>
+            <button className="px-4 font-semibold py-4 border border-black hover:border-accent flex justify-center items-center gap-x-2 bg-black group relative text-white overflow-hidden">
+              <div className="absolute w-full h-full -translate-x-full group-hover:-translate-x-0 duration-300 ease-in-oout bg-accent z-10"></div>
+                <span className="z-10">Try Now</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide z-10 lucide-arrow-right"
+                >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </button>
+                </Link>
+            <Link href='#footer'>
+            <button className="px-4 font-semibold py-4 border flex justify-center items-center gap-x-2 bg-white group relative text-black hover:text-white border-black overflow-hidden">
+              <div className="absolute w-full h-full -translate-x-full group-hover:-translate-x-0 duration-300 ease-in-oout bg-black z-10"></div>
+              <span className="z-10">View Code</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                className="lucide z-10 lucide-arrow-right"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </button>
+            </Link>
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+        <div className="flex justify-center">
+          <Image
+            src="images/student.svg"
+            width={400}
+            height={400}
+            alt="Student"
+            className="hidden lg:block w-4/5 lg:w-3/5"
+          />
+        </div>
+      </section>
+      <section className="max-w-3xl mx-auto space-y-8 ">
+        <div className="flex flex-col space-y-4 justify-center">
+          <span className="text-4xl font-semibold">What is EduTrack?</span>
+          <p className="font-normal text-base leading-7 max-w-2xl">
+            Edutrack is a student performance prediction model that is designed
+            to forecast the academic performance of students based on various
+            input factors. Leveraging machine learning techniques, particularly
+            ensemble learning with a stacking regressor, the model processes
+            data related to students study habits, previous academic scores,
+            extracurricular activities, sleep patterns, and practice with sample
+            question papers.
           </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
+        </div>
+        <div className="space-y-4">
+          <h2 className="text-4xl font-semibold">Key Features:</h2>
+          <ul className="space-y-4 max-w-2xl">
+            <li className="list-disc space-y-2 list-inside">
+              <span className="font-semibold">Input Parameters:</span> The model
+              takes into account several parameters, including hours studied,
+              previous scores, extracurricular activities (yes/no), sleep hours,
+              and the number of sample question papers practiced.
+            <table className="text-center border w-full pb-2">
+              <thead>
+                <tr>
+                  <th className="py-2 border border-black">Hours Studied</th>
+                  <th className="py-2 border border-black">Previous Scores</th>
+                  <th className="py-2 border border-black">Extracurricular Activities</th>
+                  <th className="py-2 border border-black">Sleep Hours</th>
+                  <th className="py-2 border border-black">Sample Question Papers Practiced</th>
+                </tr>
+              </thead>
+              <tbody>{/* Table rows go here */}</tbody>
+            </table>
+            </li>
+            <li className="list-disc list-inside">
+              <span className="font-semibold">Preprocessing:</span> Before
+              making predictions, the input data undergoes preprocessing steps,
+              including scaling numerical features using MinMaxScaler and
+              encoding categorical features like extracurricular activities
+              using LabelEncoder.
+            </li>
+            <li className="list-disc list-inside">
+              <span className="font-semibold">Prediction:</span> Once the input
+              data is preprocessed, the model utilizes a pre-trained stacking
+              regressor to predict the students academic performance.
+            </li>
+            <li className="list-disc list-inside">
+              <span className="font-semibold">Output:</span> The model returns
+              the predicted performance score, providing valuable insights into
+              the potential academic achievement of the student.
+            </li>
+          </ul>
+        </div>
+        <div className="flex flex-col space-y-4 justify-center">
+          <h2 className="text-4xl font-semibold">Areas of Usage:</h2>
+          <p className="font-normal text-base leading-7 max-w-2xl">
+            Educational institutions can deploy this model to assess students
+            likely academic performance, enabling timely interventions and
+            personalized support strategies. By analyzing various factors
+            influencing student success, educators and administrators can
+            optimize educational programs and support mechanisms to enhance
+            overall student outcomes.
           </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        </div>
+      </section>
+    </div>
   );
 }
