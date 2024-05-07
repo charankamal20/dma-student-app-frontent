@@ -60,7 +60,7 @@ const Form = () => {
           <input
             required
             type="number"
-            placeholder='How many hours did you study?'
+            placeholder="How many hours did you study?"
             name="hours_studied"
             value={formData.hours_studied}
             onChange={handleChange}
@@ -72,7 +72,7 @@ const Form = () => {
           <input
             required
             type="number"
-            placeholder='Previous Score out of 100'
+            placeholder="Previous Score out of 100"
             name="previous_scores"
             value={formData.previous_scores}
             onChange={handleChange}
@@ -109,7 +109,7 @@ const Form = () => {
           <input
             required
             type="number"
-            placeholder='How much did you sleep?'
+            placeholder="How much did you sleep?"
             name="sleep_hours"
             value={formData.sleep_hours}
             onChange={handleChange}
@@ -121,7 +121,7 @@ const Form = () => {
           <input
             required
             type="number"
-            placeholder='How many papers did you solve?'
+            placeholder="How many papers did you solve?"
             name="sample_question_papers_practiced"
             value={formData.sample_question_papers_practiced}
             onChange={handleChange}
@@ -196,6 +196,12 @@ const Form = () => {
                 </tr>
               </tbody>
             </table>
+            <div className="flex justify-between gap-x-2 items-center bg-gray-100 p-4 rounded-md">
+              <span className="text-gray-700">
+                Mean Squared Error for this model:{" "}
+              </span>
+              <span className="text-blue-500 font-bold">4.086049285029992</span>
+            </div>
           </>
         )}
       </div>
