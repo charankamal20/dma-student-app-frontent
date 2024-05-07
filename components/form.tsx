@@ -4,11 +4,11 @@ import axios from "axios";
 import React, { useState } from "react";
 
 type StudentData = {
-  hours_studied: number;
-  previous_scores: number;
-  extracurricular_activities: string;
-  sleep_hours: number;
-  sample_question_papers_practiced: number;
+  hours_studied: number | undefined;
+  previous_scores: number | undefined;
+  extracurricular_activities: string | undefined;
+  sleep_hours: number | undefined;
+  sample_question_papers_practiced: number | undefined;
 };
 
 const Form = () => {
