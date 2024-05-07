@@ -13,11 +13,11 @@ type StudentData = {
 
 const Form = () => {
   const [formData, setFormData] = useState<StudentData>({
-    hours_studied: 0,
-    previous_scores: 0,
-    extracurricular_activities: "",
-    sleep_hours: 0,
-    sample_question_papers_practiced: 0,
+    hours_studied: undefined,
+    previous_scores: undefined,
+    extracurricular_activities: undefined,
+    sleep_hours: undefined,
+    sample_question_papers_practiced: undefined,
   });
 
   const [loading, setLoading] = useState(false);
@@ -58,7 +58,9 @@ const Form = () => {
         <label className="space-y-2 flex flex-col">
           <span className="text-lg">Hours Studied:</span>
           <input
+            required
             type="number"
+            placeholder='How many hours did you study?'
             name="hours_studied"
             value={formData.hours_studied}
             onChange={handleChange}
@@ -68,7 +70,9 @@ const Form = () => {
         <label className="space-y-2 flex flex-col">
           <span className="text-lg">Previous Scores:</span>
           <input
+            required
             type="number"
+            placeholder='Previous Score out of 100'
             name="previous_scores"
             value={formData.previous_scores}
             onChange={handleChange}
@@ -80,6 +84,7 @@ const Form = () => {
           <div className="flex items-center space-x-2">
             <label>
               <input
+                required
                 type="radio"
                 name="extracurricular_activities"
                 value="yes"
@@ -89,6 +94,7 @@ const Form = () => {
             </label>
             <label>
               <input
+                required
                 type="radio"
                 name="extracurricular_activities"
                 value="no"
@@ -101,7 +107,9 @@ const Form = () => {
         <label className="space-y-2 flex flex-col">
           <span className="text-lg">Sleep Hours(/day):</span>
           <input
+            required
             type="number"
+            placeholder='How much did you sleep?'
             name="sleep_hours"
             value={formData.sleep_hours}
             onChange={handleChange}
@@ -111,7 +119,9 @@ const Form = () => {
         <label className="space-y-2 flex flex-col">
           <span className="text-lg">Sample Question Papers Practiced:</span>
           <input
+            required
             type="number"
+            placeholder='How many papers did you solve?'
             name="sample_question_papers_practiced"
             value={formData.sample_question_papers_practiced}
             onChange={handleChange}
